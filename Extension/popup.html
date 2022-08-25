@@ -1,0 +1,35 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style type="text/css">
+         body {
+            width: 200px;
+            height: 80px;
+            overflow: hidden;
+         }
+     </style>
+     <script src="Canvas/canvasjs.min.js"></script>
+     <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body>
+    <!--<a href="#" id="predict" class="myButton">Which Approach Should I Go With ??</a>-->
+    <button id="predict" style="height:75px;width:200px">Recommend me the Category</button>
+    <img id="loading" style="height:300px;width:400px;display:none" src="images/loading2.gif">
+    <div id="chartContainer" style="height: 0%; width: 0%;"></div>
+    <div id="error_div" style="height: 300px;width: 400px;display: none;text-align: center;">
+        <img id="error" src="images/error.png" style="display: inline-block;margin-top: 30px;">
+        <h2 id='error_text' style="color: gray;">
+            Something Went Wrong, Try Again :(
+        </h2>
+    </div>
+    <script src="scripts/popup.js"></script>
+
+  </body>
+</html>
+
